@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="images/org_lab_logo_windows_70.png"/>
+      <square150x150logo src="images/org_lab_logo_windows_150.png"/>
+      <square270x270logo src="images/org_lab_logo_windows_270.png"/>
+      <square310x310logo src="images/org_lab_logo_windows_310.png"/>
+      <wide310x150logo src="images/org_lab_logo_windows_310x150.png"/>
+      <wide540x270logo src="images/org_lab_logo_windows_540x270.png"/>
+      <TileColor>#000000</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
