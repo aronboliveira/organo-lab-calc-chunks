@@ -45,7 +45,7 @@ export default function HeaderWatcher(): JSX.Element {
     syncAriaStates(document.querySelectorAll("*"));
     addEventListener("scroll", handleScroll);
     setTimeout(() => {
-      document.querySelectorAll(".img").forEach(img => {
+      document.querySelectorAll("img").forEach(img => {
         if (img instanceof HTMLImageElement && img.src.startsWith("/image"))
           img.src = img.src.replace("/image", "image");
       });
