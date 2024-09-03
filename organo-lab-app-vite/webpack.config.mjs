@@ -4,12 +4,14 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 import HtmlReplaceWebpackPlugin from "html-replace-webpack-plugin";
+import { SubresourceIntegrityPlugin } from "webpack-subresource-integrity";
 export default {
   entry: "./src/main.tsx",
   output: {
     filename: "organo_lab_bundle.[contenthash].min.js",
     path: path.resolve("../docs"),
     publicPath: "",
+    crossOriginLoading: "anonymous",
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".scss", ".css"],
@@ -68,6 +70,10 @@ export default {
         replacement: "images/",
       },
     ]),
+    new SubresourceIntegrityPlugin({
+      hashFuncNames: ["sha384"],
+      enabled: true,
+    }),
     new MiniCssExtractPlugin({
       filename: "organo_lab_styles.[contenthash].min.css",
     }),
