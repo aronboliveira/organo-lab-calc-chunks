@@ -40,7 +40,12 @@ module.exports = {
             },
           },
         ],
-        exclude: [/node_modules/, /vite.config.ts/, /vite.config.js/],
+        exclude: [
+          /node_modules/,
+          /vite.config.ts/,
+          /vite.config.js/,
+          /wpBanned.scss/,
+        ],
       },
       {
         test: /\.scss$/,
