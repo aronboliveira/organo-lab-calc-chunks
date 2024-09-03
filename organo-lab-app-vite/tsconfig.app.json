@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "inlineSources": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": false,
+    "sourceMap": false,
+    "inlineSources": false,
+    // "outDir": "./",
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -9,10 +12,8 @@
     "skipLibCheck": true,
     "allowJs": true,
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
     "jsx": "react-jsx",
     "noImplicitAny": false,
     "strict": true,
@@ -20,5 +21,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src", "src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
 }

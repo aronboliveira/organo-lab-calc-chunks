@@ -5,7 +5,7 @@ https://github.com/aronboliveira
 */
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
+import App from "./App";
 import "./assets/styles/flatsomeStyles.scss";
 import "./assets/styles/style.scss";
 import "./assets/styles/viteAdjustements.scss";
