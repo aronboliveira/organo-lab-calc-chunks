@@ -5,11 +5,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlReplaceWebpackPlugin = require("html-replace-webpack-plugin");
 const { SubresourceIntegrityPlugin } = require("webpack-subresource-integrity");
-
+const webpack = require("webpack");
+const packageJson = require("./package.json");
 module.exports = {
   entry: "./src/main.tsx",
   output: {
-    filename: "organo_lab_bundle.[contenthash].min.js",
+    filename: `organo_lab_bundle.${packageJson.version}.[contenthash].min.js`,
     path: path.resolve(__dirname, "../docs"),
     publicPath: "",
     crossOriginLoading: "anonymous",
@@ -81,13 +82,16 @@ module.exports = {
       enabled: true,
     }),
     new MiniCssExtractPlugin({
-      filename: "organo_lab_styles.[contenthash].min.css",
+      filename: `organo_lab_styles.${packageJson.version}.[contenthash].min.css`,
     }),
     new CopyWebpackPlugin({
       patterns: [
         { from: "public/images", to: "images" },
         { from: "public/browserConfig.xml", to: "browserConfig.xml" },
       ],
+    }),
+    new webpack.DefinePlugin({
+      VERSION: JSON.stringify(packageJson.version),
     }),
   ],
   devtool: "source-map",
