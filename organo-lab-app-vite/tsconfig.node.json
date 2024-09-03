@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "noEmit": true,
+    "noEmit": false,
     "allowImportingTsExtensions": false,
     "sourceMap": true,
     "inlineSources": true,
-    // "outDir": "./",
+    "outDir": "./dist",
     "target": "ES2022",
     "lib": ["ES2023"],
     "module": "ESNext",
