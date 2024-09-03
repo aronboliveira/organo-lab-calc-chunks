@@ -1,14 +1,24 @@
 import { useEffect } from "react";
 import $ from "jquery";
+//@ts-ignore
 import loadJQuery from "../../../lib/head/js/jquery/jquery";
+//@ts-ignore
 import loadJQueryMigrate from "../../../lib/head/js/jquery/jquery-migrate";
+//@ts-ignore
 import loadJQueryInputMask from "../../../lib/head/js/forminator/jquery-inputmask";
+//@ts-ignore
 import loadJQueryValidate from "../../../lib/head/js/forminator/jquery.validate";
+//@ts-ignore
 import loadForminatorForm from "../../../lib/head/js/forminator/ui/forminator-form";
+//@ts-ignore
 import loadHoverIntent from "../../../lib/head/js/wp/hoverIntent";
+//@ts-ignore
 import loadInputMask from "../../../lib/head/js/forminator/inputmask";
+//@ts-ignore
 import loadInputMaskBinding from "../../../lib/head/js/forminator/inputmask-binding";
+//@ts-ignore
 import loadFlatsome from "../../../lib/head/js/flatsome/flatsome";
+//@ts-ignore
 import loadFlatsomeLiveSearch from "../../../lib/head/js/flatsome/flatsome-live-search";
 export default function JQueryForminatorIntegrator(): JSX.Element {
   useEffect(() => {

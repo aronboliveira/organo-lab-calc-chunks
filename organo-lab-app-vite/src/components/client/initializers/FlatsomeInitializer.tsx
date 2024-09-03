@@ -1,3 +1,4 @@
+//@ts-ignore
 import flatsomeVars from "../../../lib/head/js/client/flatsomeProps";
 export default function FlatsomeInitializer(): JSX.Element {
   return (

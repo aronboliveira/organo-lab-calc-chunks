@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "noEmit": true,
+    "noEmit": false,
     "allowImportingTsExtensions": false,
     "sourceMap": false,
     "inlineSources": false,
@@ -21,6 +21,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src", "src/**/*.ts", "src/**/*.tsx", "generateSHA.ts"],
   "exclude": ["node_modules"]
 }

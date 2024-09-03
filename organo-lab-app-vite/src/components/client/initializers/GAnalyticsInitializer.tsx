@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+//@ts-ignore
 import gTagJsAfterStr from "../../../lib/head/js/client/gtagJsAfter";
 export default function GAnalyticsInitializer(): JSX.Element {
   const [fooStr, setFoo] = useState<string>("");

@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { WpEmojiSettings } from "../../../declarations/interfaces";
+//@ts-ignore
 import exeEmoji from "../../../lib/head/js/wp/wp-emoji-release.js";
+//@ts-ignore
 import emojiScript from "../../../lib/head/js/client/emojiScript.js";
 declare global {
   interface Window {
