@@ -1,6 +1,5 @@
 import { Root, createRoot } from "react-dom/client";
 import Footer from "./components/main/Footer";
-import Header from "./components/main/Header";
 import Main from "./components/main/Main";
 import { useEffect } from "react";
 import Scripts from "./components/wrappers/Scripts";
@@ -25,7 +24,6 @@ export default function App(): JSX.Element {
   }, []);
   return (
     <div id="wrapper">
-      <Header />
       <Main />
       <Footer />
     </div>
