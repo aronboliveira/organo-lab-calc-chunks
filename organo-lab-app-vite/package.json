@@ -5,9 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "wdev": "webpack serve --config webpack.config.js --mode development",
+    "build": "tsc -b && npm run sbuild && vite build",
+    "wbuild": "tsc -b && npm run sbuild && webpack --config webpack.config.mjs --mode production",
+    "vbuild": "vite build",
+    "sbuild": "sass src/assets/styles:dist/assets/styles --style compressed",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "wpreview": "webpack serve --config webpack.config.js --mode production"
   },
   "dependencies": {
     "@types/jquery": "^3.5.30",
@@ -19,17 +24,31 @@
     "jquery": "^3.7.1",
     "react": "^18",
     "react-dom": "^18",
-    "typescript": "^5.5.4"
+    "sass": "^1.77.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
     "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
+    "html-replace-webpack-plugin": "^2.6.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.1",
     "node": "^22.7.0",
+    "sass-loader": "^16.0.1",
+    "string-replace-loader": "^3.1.0",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
