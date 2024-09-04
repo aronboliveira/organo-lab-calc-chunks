@@ -11,7 +11,7 @@ export default function Footer(): JSX.Element {
             <img
               id="brand-invite-logo"
               alt={`Logo ${keyPhrase} Pequena`}
-              src="/images/org_lab_logo_favicon_32.png"
+              src="images/org_lab_logo_favicon_32.png"
               width={40}
               height={40}
             />

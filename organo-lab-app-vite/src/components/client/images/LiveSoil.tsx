@@ -4,7 +4,7 @@ export default function LiveSoil(): JSX.Element {
     <img
       id="soilPackage"
       alt={`${keyPhrase} — Pacote de Solo Vivo`}
-      src="/images/kit_super_solo.jpg"
+      src="images/kit_super_solo.jpg"
       width={375}
       height={480}
       title="Clique aqui para acessar a página do produto!"

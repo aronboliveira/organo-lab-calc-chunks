@@ -45,12 +45,6 @@ export default function HeaderWatcher(): JSX.Element {
     syncAriaStates(document.querySelectorAll("*"));
     addEventListener("scroll", handleScroll);
     setTimeout(() => {
-      document.querySelectorAll("img").forEach(img => {
-        if (img instanceof HTMLImageElement && img.src.startsWith("/image"))
-          img.src = img.src.replace("/image", "image");
-      });
-    }, 500);
-    setTimeout(() => {
       alert(
         "Esta é uma implantação estática de teste feita com Vite + React.js para posterior integração no sistema WordPress da Organo Lab©.\n\nPor favor visite https://organolab.com.br/ para informações em produção.\n\n\nCódigo aberto disponível em: https://github.com/aronboliveira/organo-lab-teste"
       );
