@@ -24,6 +24,12 @@ export default function Scripts(): JSX.Element {
                 "@id": "https://blog.organolab.com.br/calculadora-de-solo/",
                 url: origin,
                 name: metadata.title,
+                image: {
+                  "@type": "ImageObject",
+                  url: "https://blog.organolab.com.br/images/orglab_logo_og_630.png",
+                  width: 630,
+                  height: 630,
+                },
                 isPartOf: {
                   "@id": "https://blog.organolab.com.br/#website",
                 },

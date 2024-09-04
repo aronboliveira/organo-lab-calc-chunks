@@ -19,6 +19,11 @@ main {
     margin-top: 7.5rem;
   }
 }
+.btn {
+  &#brand-invite-shop-btn {
+    margin-right: 0 !important;
+  }
+}
 .calc-btn {
   margin-bottom: 0;
   margin-right: 0;
@@ -43,6 +48,14 @@ main {
 }
 #brand-wrapper {
   padding-bottom: 10rem;
+  width: 100% !important;
+  #brand-invite-sect {
+    #brand-invite-body {
+      #brand-invite-subtitle-wrapper {
+        padding-left: 0.3rem;
+      }
+    }
+  }
 }
 #calc-title {
   font-size: 3rem;
@@ -77,6 +90,11 @@ main {
 #root {
   width: 100%;
   height: 100%;
+}
+#soilQuant {
+  &::placeholder {
+    color: #a19f9f;
+  }
 }
 @media screen and (min-width: 536px) {
   #kits-wrapper {
