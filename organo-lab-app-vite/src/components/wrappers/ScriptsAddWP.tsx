@@ -274,48 +274,6 @@ export default function ScriptsAddWp(): JSX.Element {
       );
       head.append(meta);
     }
-    const additionalLinks = [
-      {
-        id: "google-fonts-api",
-        href: "https://fonts.googleapis.com",
-        rel: "preconnect",
-        crossorigin: "anonymous",
-      },
-      {
-        id: "google-fonts-static",
-        href: "https://fonts.gstatic.com",
-        rel: "preconnect",
-        crossorigin: "anonymous",
-      },
-      {
-        id: "google-fonts-poppins",
-        href: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap",
-        rel: "stylesheet",
-        crossorigin: "anonymous",
-      },
-      {
-        id: "bootstrap-link",
-        href: "https://cdn.jsdelivr.net/gh/aronboliveira/organo-lab-calc-chunks@main/organo_lab_styles.1.0.12.01659aec0d86d39887c5.min.css",
-        rel: "stylesheet",
-        integrity:
-          "sha384-uJnkwiYL/tUwpfJ84Bh0RoKjkGJyCrgN8Cxax6IJ2I8ZwiU9U7y+r8UsyScfZ8aI",
-        crossorigin: "anonymous",
-      },
-    ];
-    additionalLinks.forEach(link => {
-      if (
-        !document.querySelector(`link#${link.id}`) ||
-        !document.querySelector(`link[href="${link.href}"]`)
-      ) {
-        const linkElement = document.createElement("link");
-        linkElement.setAttribute("href", link.href);
-        linkElement.setAttribute("rel", link.rel);
-        linkElement.setAttribute("crossorigin", link.crossorigin);
-        if (link.integrity)
-          linkElement.setAttribute("integrity", link.integrity);
-        head.appendChild(linkElement);
-      }
-    });
   }, []);
   return (
     <>
@@ -336,12 +294,6 @@ export default function ScriptsAddWp(): JSX.Element {
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossOrigin="anonymous"
         id="boostrap-script"
-      ></script>
-      <script
-        defer
-        src="https://cdn.jsdelivr.net/gh/aronboliveira/organo-lab-calc-chunks@main/organo_lab_bundle.1.0.12.ee8ddb1c3ac88edf4e13.min.js"
-        integrity="sha384-6nEpaLg3VkSUqisbADOOwfCSdmjW48EQBitNFNm2VM8v/8rwV+4Xwh98XDLu7oKK"
-        crossOrigin="anonymous"
       ></script>
     </>
   );
