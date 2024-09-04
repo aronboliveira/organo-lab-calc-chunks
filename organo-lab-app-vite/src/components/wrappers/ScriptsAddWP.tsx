@@ -9,27 +9,21 @@ export default function ScriptsAddWp(): JSX.Element {
       const schema =
         document.querySelector(".yoast-schema-graph") ??
         document.querySelector('[type="application/ld+json"]');
-      if (!schema) throw new Error(`Failed to fetch yoast schema element`);
+      if (!(schema instanceof HTMLElement))
+        throw new Error(`Failed to fetch yoast schema element`);
       if (!/image/.test(schema.innerHTML)) {
-        const insert =
-          /datePublished/g.exec(schema.innerHTML) ??
-          /isPartOf/g.exec(schema.innerHTML);
-        if (!insert)
-          throw new Error(`Failed to locate index for inserting image`);
-        const parts = [
-          schema.innerHTML.slice(0, insert.index),
-          schema.innerHTML.slice(insert.index),
-        ];
-        schema.innerHTML = `
-				${parts[0]}
-				image: {
-					"@type": "ImageObject",
-					url: "https://blog.organolab.com.br/images/orglab_logo_og_630.png",
-					width: 630,
-					height: 630,
-				},
-				${parts[1]}
-				`;
+        try {
+          const schemaData = JSON.parse(schema.innerText);
+          schemaData.image = {
+            "@type": "ImageObject",
+            url: "https://blog.organolab.com.br/images/orglab_logo_og_630.png",
+            width: 630,
+            height: 630,
+          };
+          schema.textContent = JSON.stringify(schemaData, null, 2);
+        } catch (e) {
+          console.error(`Failed to parse schema JSON: ${(e as Error).message}`);
+        }
       }
     } catch (e) {
       console.error(
@@ -46,7 +40,10 @@ export default function ScriptsAddWp(): JSX.Element {
         metaKeywords.setAttribute("name", "keywords");
         metaKeywords.setAttribute("content", kws);
         head.prepend(metaKeywords);
-      } else if (kw instanceof HTMLMetaElement) kw.content += `, ${kws}`;
+      } else if (kw instanceof HTMLMetaElement)
+        kw.content = [
+          ...new Set(kw.content.split(", ").concat(kws.split(", "))),
+        ].join(", ");
       if (
         !(
           document.querySelector('meta[http-equiv="X-UA-Compatible"]') ??
