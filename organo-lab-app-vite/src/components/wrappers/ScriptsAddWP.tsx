@@ -295,7 +295,7 @@ export default function ScriptsAddWp(): JSX.Element {
       },
       {
         id: "bootstrap-link",
-        href: "https://cdn.jsdelivr.net/gh/aronboliveira/organo-lab-calc-chunks@main/organo_lab_styles.1.0.11.3c0f17be2aed033afc99.min.css",
+        href: "https://cdn.jsdelivr.net/gh/aronboliveira/organo-lab-calc-chunks@main/organo_lab_styles.1.0.12.01659aec0d86d39887c5.min.css",
         rel: "stylesheet",
         integrity:
           "sha384-uJnkwiYL/tUwpfJ84Bh0RoKjkGJyCrgN8Cxax6IJ2I8ZwiU9U7y+r8UsyScfZ8aI",
@@ -339,7 +339,7 @@ export default function ScriptsAddWp(): JSX.Element {
       ></script>
       <script
         defer
-        src="https://cdn.jsdelivr.net/gh/aronboliveira/organo-lab-calc-chunks@main/organo_lab_bundle.1.0.11.9b2c85e45bca45ad077c.min.js"
+        src="https://cdn.jsdelivr.net/gh/aronboliveira/organo-lab-calc-chunks@main/organo_lab_bundle.1.0.12.ee8ddb1c3ac88edf4e13.min.js"
         integrity="sha384-6nEpaLg3VkSUqisbADOOwfCSdmjW48EQBitNFNm2VM8v/8rwV+4Xwh98XDLu7oKK"
         crossOrigin="anonymous"
       ></script>

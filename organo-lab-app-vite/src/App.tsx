@@ -2,7 +2,7 @@ import { Root, createRoot } from "react-dom/client";
 import Footer from "./components/main/Footer";
 import Main from "./components/main/Main";
 import { useEffect } from "react";
-import Scripts from "./components/wrappers/Scripts";
+import ScriptsAddWp from "./components/wrappers/ScriptsAddWP";
 export const keyPhrase = "Organo Lab ©";
 export const metadata = {
   title: `${keyPhrase} — Calculadora de Solo`,
@@ -19,7 +19,7 @@ export default function App(): JSX.Element {
         delete roots.scripts;
         roots.scripts = createRoot(scripts);
       }
-      roots.scripts.render(<Scripts />);
+      roots.scripts.render(<ScriptsAddWp />);
     }
   }, []);
   return (
