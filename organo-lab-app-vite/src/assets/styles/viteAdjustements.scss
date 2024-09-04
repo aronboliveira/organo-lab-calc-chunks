@@ -36,6 +36,9 @@ h2 {
 #kits-wrapper {
   .kit-title {
     color: $blackishFont;
+    width: 80% !important;
+    text-align: center !important;
+    margin-right: auto !important;
   }
 }
 #root {
