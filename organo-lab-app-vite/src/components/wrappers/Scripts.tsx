@@ -2,7 +2,6 @@ import { metadata } from "../../App";
 import EmojiInitializer from "../client/initializers/EmojiInitializer";
 import FlatsomeInitializer from "../client/initializers/FlatsomeInitializer";
 import GAnalyticsInitializer from "../client/initializers/GAnalyticsInitializer";
-//@ts-ignore
 import forminatorProps from "../../lib/head/js/client/forminatorProps";
 export default function Scripts(): JSX.Element {
   return (
