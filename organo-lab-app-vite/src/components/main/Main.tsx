@@ -62,7 +62,7 @@ export default function Main(): JSX.Element {
       <img
         id="soilSacs"
         alt="Sacos de Solo"
-        src="images/sacos_solo_redc.png"
+        src="https://blog.organolab.com.br/wp-content/uploads/2024/09/sacos_solo_redc.png"
         width={527}
         height={197}
       />
@@ -79,7 +79,7 @@ export default function Main(): JSX.Element {
         <img
           id="invite-logo-img"
           alt="Logo para Anúncio"
-          src="images/org_lab_logo_favicon_96.png"
+          src="https://blog.organolab.com.br/wp-content/uploads/2024/09/org_lab_logo_favicon_96.png"
           width={86}
           height={84}
         />
