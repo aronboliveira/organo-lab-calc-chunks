@@ -36,12 +36,23 @@ h2 {
 #kits-wrapper {
   .kit-title {
     color: $blackishFont;
-    width: 80% !important;
+    width: 90% !important;
     text-align: center !important;
-    margin-right: auto !important;
+    padding-right: 5%;
+    min-height: 3.125rem;
   }
 }
 #root {
   width: 100%;
   height: 100%;
+}
+@media screen and (min-width: 536px) {
+  #kits-wrapper {
+    .kit-title {
+      &#titleCootsSoil,
+      &#titlegynetcs {
+        padding-right: 13.5%;
+      }
+    }
+  }
 }
