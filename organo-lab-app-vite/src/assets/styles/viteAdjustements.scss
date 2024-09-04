@@ -14,9 +14,24 @@ h2 {
     color: $blackishFont;
   }
 }
+main {
+  &#main {
+    margin-top: 7.5rem;
+  }
+}
 .calc-btn {
   margin-bottom: 0;
   margin-right: 0;
+}
+.col-inner {
+  > p {
+    &:has(br),
+    &:has(meta),
+    &:has(script),
+    &:has(link) {
+      display: none !important;
+    }
+  }
 }
 #brand-invite-sect {
   #brand-invite-header {
@@ -32,6 +47,23 @@ h2 {
 #calc-title {
   font-size: 3rem;
   color: $blackishFont;
+}
+#developer-div {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  #developed-title {
+    width: 10rem;
+  }
+  #development {
+    width: 5.5rem;
+  }
+  .bi-github {
+    transform: scale(1) translateY(-3px);
+  }
 }
 #kits-wrapper {
   .kit-title {
