@@ -12,5 +12,6 @@ It is meant to be a static export further plugged into a WordPress system.
 Thus, the search inputs are not expected to work, as there is no real server attached to it.
 
 Please check
-https://blog.organolab.com.br/blog/ or the canonical link
-for the effective production deploy.
+https://blog.organolab.com.br/blog/ or the canonical link for the effective production deploy.
+https://aronboliveira.github.io/organo-lab-calc-chunks/ has an example static deploy for simpler visualization, built with WebPack.
+https://organo-lab-calculadora.netlify.app/ has an example SSG deploy build with Next.js.
