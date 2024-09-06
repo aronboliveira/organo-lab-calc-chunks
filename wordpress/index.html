@@ -1,9 +1,16 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <meta name="X-UA-Compatible" content="IE=Edge" />
   <meta
     name="keywords"
     content="Jardinagem, Cultivo, Solo, Compostagem, Horticultura, Fertilizantes, Agricultura sustentável, Substratos, Adubo orgânico, Solo nutritivo, Solo para jardinagem, Melhorador de solo, Composição de solo, Cultivo sustentável, Calculadora de solo, Montagem de solo, Kit de solo, Solo matinho cheiroso, Receita de solo, Receita matinho cheiroso, Solo vivo, Super solo, Solo orgânico, Gardening, Cultivation, Soil, Composting, Horticulture, Fertilizers, Sustainable agriculture, Substrates, Organic fertilizer, Nutritious soil, Gardening soil, Soil enhancer, Soil composition, Sustainable cultivation, Soil calculator, Soil assembly, Soil kit, Fragrant soil, Soil recipe, Fragrant soil recipe, Living soil, Super soil, Organic soil, Jardinería, Cultivo, Suelo, Compostaje, Horticultura, Fertilizantes, Agricultura sostenible, Sustratos, Fertilizante orgánico, Suelo nutritivo, Suelo para jardinería, Mejorador de suelo, Composición del suelo, Cultivo sostenible, Calculadora de suelo, Montaje de suelo, Kit de suelo, Suelo fragante, Receta de suelo, Receta de suelo fragante, Suelo vivo, Súper suelo, Suelo orgánico"
+  />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Organo Lab" />
+  <meta property="og:title" content="Organo Lab © — Calculadora de Solo" />
+  <meta
+    property="og:url"
+    content="https://blog.organolab.com.br/calculadora-de-solo"
   />
   <meta
     property="og:image"
@@ -21,6 +28,8 @@
   />
   <meta property="article:author" content="Danilo Sakamoto" />
   <meta property="article:section" content="Science" />
+  <meta property="article:modified_time" content="#" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Organo Lab © — Calculadora de Solo" />
   <meta
     name="twitter:image"
@@ -163,12 +172,6 @@
     rel="icon"
     crossorigin="anonymous"
   />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-    rel="stylesheet"
-  />
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -177,17 +180,23 @@
     id="bootstrap-css"
   />
   <link
-    href="https://cdn.jsdelivr.net/gh/aronboliveira/organo-lab-calc-chunks@main/organo_lab_styles.1.0.10.3c0f17be2aed033afc99.min.css"
+    href="https://cdn.jsdelivr.net/gh/aronboliveira/organo-lab-calc-chunks@main/organo_lab_styles.1.0.12.dcb8df0d1c09d2cb5ceb.min.css"
     rel="stylesheet"
-    integrity="sha384-uJnkwiYL/tUwpfJ84Bh0RoKjkGJyCrgN8Cxax6IJ2I8ZwiU9U7y+r8UsyScfZ8aI"
+    integrity="sha384-IsnA7CjNEIzt4e/Spsd5VXRwG8W1sS23+QhlK2UKiMSwzGaQ1nClhm4ld1lT/XXl"
     crossorigin="anonymous"
     id="calc-css-bundle"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
   />
 </head>
 <body>
   <noscript>You need JavaScript to run this application.</noscript>
   <p id="seo-paragraph" style="display: none" ;>
-    COPYRIGHT: Aron Barbosa de Oliveira (https://github.com/aronboliveira) &
+    COPYRIGHT: Aron Barbosa de Oliveira (https://github.com/aronboliveira) &amp;
     Danilo Sakamoto (GPL/GNU). This is an calculator for the Soil Kit
     (Calculadora de Solo) used by the Organo Lab ©. It was built using
     Typescript, React.js, and Webpack. Static deployments are found in:
@@ -1395,8 +1404,9 @@
           >
             <path
               d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-            ></path></svg
-        ></a>
+            ></path>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
@@ -1431,13 +1441,13 @@
     </script>
     <script
       type="text/javascript"
-      defer=""
+      defer
       src="https://blog.organolab.com.br/wp-includes/js/wp-emoji-release.min.js?ver=6.6.1"
       id="wp-emoji-release"
     ></script>
     <script
       type="text/javascript"
-      defer=""
+      defer
       id="forminator-front-scripts-js-extra"
       crossorigin="anonymous"
     >
@@ -1478,14 +1488,14 @@
     </script>
     <script
       type="text/javascript"
-      defer=""
+      defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
       id="boostrap-script"
     ></script>
     <script
-      defer="defer"
+      defer
       src="https://cdn.jsdelivr.net/gh/aronboliveira/organo-lab-calc-chunks@main/organo_lab_bundle.1.0.10.9b2c85e45bca45ad077c.min.js"
       integrity="sha384-6nEpaLg3VkSUqisbADOOwfCSdmjW48EQBitNFNm2VM8v/8rwV+4Xwh98XDLu7oKK"
       crossorigin="anonymous"

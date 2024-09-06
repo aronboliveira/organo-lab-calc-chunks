@@ -96,7 +96,7 @@ export function modelScripts(): void {
         if (!(link instanceof HTMLLinkElement)) return;
         if (link.id === "" && link.href !== "") {
           const url = new URL(link.href);
-          link.id = url.pathname.replace(/[\-\?\=\+\s\.~,]/g, "__");
+          link.id = url.pathname.replace(/[\-\?\=\+\s\.\&\<\>\^~,]/g, "__");
         }
         if (link.rel === "") link.rel = "alternate";
         if (link.crossOrigin === "") link.crossOrigin = "anonymous";

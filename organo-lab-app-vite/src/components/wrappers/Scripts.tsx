@@ -3,6 +3,7 @@ import EmojiInitializer from "../client/initializers/EmojiInitializer";
 import FlatsomeInitializer from "../client/initializers/FlatsomeInitializer";
 import GAnalyticsInitializer from "../client/initializers/GAnalyticsInitializer";
 import forminatorProps from "../../lib/head/js/client/forminatorProps";
+import ScriptsWatcher from "../client/watchers/ScriptsWatcher";
 export default function Scripts(): JSX.Element {
   return (
     <>
@@ -112,6 +113,7 @@ export default function Scripts(): JSX.Element {
         crossOrigin="anonymous"
         id="boostrap-script"
       ></script>
+      <ScriptsWatcher />
     </>
   );
 }
