@@ -19,8 +19,13 @@ export default function LNumInp({
   const dlRef = useRef<nlDl>(null);
   const sanitazeValue = (n: string) => {
     if (/[^0-9,\.]/g.test(n)) n = n.replace(/[^0-9,\.]/g, "");
-    if (n.length > 5) n = n.slice(0, 5);
-    return n ?? "0";
+    if (n.length > 11) n = n.slice(0, 11);
+    const [integerPart, decimalPart] = n.split(/[,.]/);
+    let sanitizedInteger = integerPart ? integerPart.slice(0, 5) : "";
+    let sanitizedDecimal = /[0-9]/g.test(decimalPart)
+      ? `.${decimalPart.slice(0, 5)}`
+      : "";
+    return `${sanitizedInteger}${sanitizedDecimal}` ?? "0";
   };
   useEffect(() => {
     const handleResize = (): void => {
@@ -99,16 +104,16 @@ export default function LNumInp({
           id={id}
           className="form-control calc-inp"
           name={name}
-          title="Digite aqui o valor de solo para ser avaliado."
+          title="Digite aqui o valor de solo para ser avaliado. Use . para decimais."
           placeholder="Digite aqui os litros de solo."
           data-title={joinedTitle}
           data-group={group}
           type="number"
-          pattern="^[0-9]{1,}$"
+          pattern="^[0-9]{1,11}$"
           min={0}
           max={99999}
           minLength={1}
-          maxLength={5}
+          maxLength={11}
           autoComplete="off"
           list={`dl${pascalId}`}
           ref={r}
