@@ -1,7 +1,7 @@
 {
   "name": "organo-lab-app-vite",
   "private": true,
-  "version": "1.0.14",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
